@@ -1,7 +1,18 @@
 class SortData {
   constructor(public data: number[]) {}
   sort(): void {
-    throw new Error("Method not implemented.");
+    const { length } = this.data;
+    console.log("BEFORE >>", this.data);
+    for (let i = 0; i < length; i++) {
+      for (let j = 0; j < length - i - 1; j++) {
+        if (this.data[j] > this.data[j + 1]) {
+          const left = this.data[j];
+          this.data[j] = this.data[j + 1];
+          this.data[j + 1] = left;
+        }
+      }
+    }
+    console.log("SORTED >>", this.data);
   }
 }
 
@@ -17,4 +28,4 @@ const years = dateArray.map((date) => {
 });
 const sortData = new SortData(years);
 sortData.sort();
-console.log(years);
+//console.log(years);
