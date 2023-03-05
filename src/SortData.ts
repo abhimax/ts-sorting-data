@@ -1,4 +1,3 @@
-import { Numbers } from "./Numbers";
 interface SortingProps {
   length: number;
   compare(indexLeft: number, indexRight: number): boolean;
