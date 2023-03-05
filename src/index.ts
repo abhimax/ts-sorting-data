@@ -1,20 +1,5 @@
-class SortData {
-  constructor(public data: number[]) {}
-  sort(): void {
-    const { length } = this.data;
-    console.log("BEFORE >>", this.data);
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.data[j] > this.data[j + 1]) {
-          const left = this.data[j];
-          this.data[j] = this.data[j + 1];
-          this.data[j + 1] = left;
-        }
-      }
-    }
-    console.log("SORTED >>", this.data);
-  }
-}
+import { Numbers } from "./Numbers";
+import { SortData } from "./SortData";
 
 const dateArray = [
   new Date(2010, 9, 24),
@@ -26,6 +11,7 @@ const dateArray = [
 const years = dateArray.map((date) => {
   return date.getFullYear();
 });
-const sortData = new SortData(years);
+const numbersData = new Numbers(years);
+const sortData = new SortData(numbersData);
 sortData.sort();
-//console.log(years);
+console.log(numbersData);
