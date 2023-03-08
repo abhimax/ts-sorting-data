@@ -1,5 +1,5 @@
 import { Numbers } from "./Numbers";
-import { SortData } from "./SortData";
+//import { SortData } from "./SortData";
 import { Strings } from "./Strings";
 
 const dateArray = [
@@ -14,12 +14,11 @@ const years = dateArray.map((date) => {
   return date.getFullYear();
 });
 const numbersData = new Numbers(years);
-const sortData = new SortData(numbersData);
-sortData.sort();
+//const sortData = new SortData(numbersData);
+numbersData.sort();
 console.log(numbersData);
 
-//String Sort
 const dataStrings = new Strings("ABhiMan");
-const dataSorting = new SortData(dataStrings);
-dataSorting.sort();
+//const dataSorting = new SortData(dataStrings);
+dataStrings.sort();
 console.log(dataStrings);

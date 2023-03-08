@@ -1,5 +1,9 @@
-export class Strings {
-  constructor(public str: string) {}
+import { SortData } from "./SortData";
+
+export class Strings extends SortData {
+  constructor(public str: string) {
+    super();
+  }
 
   get length(): number {
     return this.str.length;
